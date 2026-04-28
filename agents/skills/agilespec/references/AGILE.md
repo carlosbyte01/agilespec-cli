@@ -5,11 +5,11 @@
 **AgileSpec** is a open source format for AI-driven development. Its goal is to inject Agile Methodologies into AI Coding Agents. Levearing Scrum, SDD, BDD and TDD, proven methodologies that work on human teams, now they work for AI Coding Agents.
 
 **The five pillars of AgileSpec**:
-- **Scrum**: **The Manager** that drives the workflow and ensures the agents stay on track. It is the one that decides what to do next based on statuses and graph dependencies.
-- **SDD (Specification-Driven Development)**: Is **The Architect** that defines the high-level intent and project structure, with clear and concise specifications. It ensures the agent understands "What" we are building.
-- **BDD (Behavior-Driven Development)**: **The User** that defines the conversational logic using Gherkin (Given/When/Then). It ensures the agent understands "How" it should behave.
-- **TDD (Test-Driven Development)**: Is **The Engineer** that enforces code integrity and quality through a Red-Green-Refactor loop. It ensures the agent delivers "Proven" results.
 - **AGENTS.md (Native support)**: It relies on the AGENTS.md standard to guarantee compatibility between different AI coding agents; **claude**, **antigravity**, **vscode**, **cursor**, **gemini-cli**, **codex**, **pi**, **aider**, and counting.  
+- **Scrum**: **The Manager** that drives the workflow and ensures the agents stay on track. It is the one that decides what to do next based on statuses and graph dependencies.
+- **SDD (Specification Driven Development)**: Is **The Architect** that defines the high-level intent and project structure, with clear and concise specifications. It ensures the agent understands "What" we are building.
+- **BDD (Behavior Driven Development)**: **The User** that defines the conversational logic using Gherkin (Given/When/Then). It ensures the agent understands "How" it should behave.
+- **TDD (Test Driven Development)**: Is **The Engineer** that enforces code integrity and quality through a Red-Green-Refactor loop. It ensures the agent delivers "Proven" results.
 
 
 The orchestration of this five pillars is what makes AgileSpec a high-velocity engine for AI-driven development, with HITL (Human-in-the-loop), immediate observavility and product development state at any moment.
@@ -23,20 +23,31 @@ npm i -g @agilespec/cli@latest
 
 ## How to use
 1. Initialize the project
-    ```
+    
+    Locate your project folder:
+    ```bash
     cd /path/to/your/project
+    ```
+    
+    Init using `agilespec` CLI:
+    ```bash
+    agilespec init
+    ```
+
+    Init using `npx`:
+    ```bash
     npx @agilespec/cli@latest init
     ```
-2. Open your code agent and start the development cycle, let's said you are using `pi`
+2. Open your coding agent and start the development cycle, let's said you are using [`pi` coding agent](https://pi.dev/)
     ```
-    User: [`/agile-init`](../../agile-init/SKILL.md) or "Start the AgileSpec session"
+    User: /agile-init or "Start the AgileSpec session"
 
-    Pi: I validated the project is already initialized, I will start a [`/agile-refine-session`](../../agile-refine-session/SKILL.md) to understand the project better.
+    Pi: I validated the project is already initialized, I will start a /agile-refine-session to understand the project better.
     Pi: What would you like to build? Please describe the features or the high-level goal of this project.
 
     User: I want to build a Task Management CLI for adding tasks on the fly, and store them in superlight JSON database.
 
-    Pi: I will start a [`/agile-feature-add`](../../agile-feature-add/SKILL.md) to add the new feature to the project.
+    Pi: I will start a /agile-feature-add to add the new feature to the project.
 
     Pi: Based on your requirement, we have a new feature for this project:
         ┌───────────┬─────────────────────┬─────────────┐
@@ -119,18 +130,18 @@ npm i -g @agilespec/cli@latest
 ## Agent commands and NLP triggers
 All agents could be invoked by the user using the command `/agile-[command]` or by the system using the NLP triggers.
 
-| Command                 | Rules Definition                                |
+| Command                 | NLP Trigger                                |
 | ---                     | ---                                             |
-| [`/agile-init`](../../agile-init/SKILL.md)           | "Init the project", "Initialize the agile structure", "Create the initial project folders", "Set up the agile workspace" |
-| [`/agile-refine-session`](../../agile-refine-session/SKILL.md) | "Refine the session", "Start the refine session", "Refine the project", "Refine the user stories" |
-| [`/agile-feature-add`](../../agile-feature-add/SKILL.md)    | "Add a new feature", "Create a feature for [description]", "Add a new feature to the project", "Register a high-level requirement" |
-| [`/agile-feature-slice`](../../agile-feature-slice/SKILL.md)  | "Slice the feature", "Break down feature [ID/Name]", "Slice this into smaller user stories", "Create stories from the [Name] feature" |
-| [`/agile-feature-comment`](../../agile-feature-comment/SKILL.md)| "Add a comment to feature [ID]", "Comment on feature [ID]", "I've added a comment to feature [ID]", "Feature [ID] has a comment" |
-| [`/agile-story-add`](../../agile-story-add/SKILL.md)      | "Add a new user story", "Create a story for [description]", "Add a user story to the backlog", "Document a requirement for [persona]" |
-| [`/agile-story-comment`](../../agile-story-comment/SKILL.md)  | "Add a comment to story [ID]", "Comment on story [ID]", "I've added a comment to story [ID]", "Story [ID] has a comment" |
-| [`/agile-story-start`](../../agile-story-start/SKILL.md)    | "Start the user story [ID]", "Let's work on story [Name]", "Start processing the story", "Implement story [ID]" |
-| [`/agile-story-in-review`](../../agile-story-in-review/SKILL.md)| "The user story is in review", "Move story [ID] to in review", "I've put the story in review", "Story [ID] is in review", "Mark the user story as in review" |
-| [`/agile-story-done`](../../agile-story-done/SKILL.md)     | "The user story is done", "I've completed the story", "Story [ID] is finished", "Mark the user story as completed" |
+| [`/agile-init`](agents/skills/agile-init/SKILL.md)           | "Init the project", "Initialize the agile structure", "Create the initial project folders", "Set up the agile workspace" |
+| [`/agile-refine-session`](agents/skills/agile-refine-session/SKILL.md) | "Refine the session", "Start the refine session", "Refine the project", "Refine the user stories" |
+| [`/agile-feature-add`](agents/skills/agile-feature-add/SKILL.md)    | "Add a new feature", "Create a feature for [description]", "Add a new feature to the project", "Register a high-level requirement" |
+| [`/agile-feature-slice`](agents/skills/agile-feature-slice/SKILL.md)  | "Slice the feature", "Break down feature [ID/Name]", "Slice this into smaller user stories", "Create stories from the [Name] feature" |
+| [`/agile-feature-comment`](agents/skills/agile-feature-comment/SKILL.md)| "Add a comment to feature [ID]", "Comment on feature [ID]", "I've added a comment to feature [ID]", "Feature [ID] has a comment" |
+| [`/agile-story-add`](agents/skills/agile-story-add/SKILL.md)      | "Add a new user story", "Create a story for [description]", "Add a user story to the backlog", "Document a requirement for [persona]" |
+| [`/agile-story-comment`](agents/skills/agile-story-comment/SKILL.md)  | "Add a comment to story [ID]", "Comment on story [ID]", "I've added a comment to story [ID]", "Story [ID] has a comment" |
+| [`/agile-story-start`](agents/skills/agile-story-start/SKILL.md)    | "Start the user story [ID]", "Let's work on story [Name]", "Start processing the story", "Implement story [ID]" |
+| [`/agile-story-in-review`](agents/skills/agile-story-in-review/SKILL.md)| "The user story is in review", "Move story [ID] to in review", "I've put the story in review", "Story [ID] is in review", "Mark the user story as in review" |
+| [`/agile-story-done`](agents/skills/agile-story-done/SKILL.md)     | "The user story is done", "I've completed the story", "Story [ID] is finished", "Mark the user story as completed" |
 
 
 <!-- ## The AgileSpec Framework for guardrailing AI Coding Agents -->
@@ -155,6 +166,5 @@ We don't just use "Todo" and "Done." Our lifecycle ensures the AI knows exactly 
 
 ## The automatic triggers
 When running project indexing, the agent will automatically trigger the following actions:
-1. [`/agile-init`](../../agile-init/SKILL.md) if the project is not initialized yet, ask the human (or lead architect agent) if they want to initialize the project.
-2. [`/agile-refine-session`](../../agile-refine-session/SKILL.md) If there are doubts about the project, or not detected features, or not detected user stories, inform the 
-human (or lead architect agent) about entering on a refine session.
+1. [`/agile-init`](agents/skills/agile-init/SKILL.md) if the project is not initialized yet, ask the human (or lead architect agent) if they want to initialize the project.
+2. [`/agile-refine-session`](agents/skills/agile-refine-session/SKILL.md) If there are doubts about the project, or not detected features, or not detected user stories, inform the human (or lead architect agent) about entering on a refine session.

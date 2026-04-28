@@ -31,6 +31,7 @@ The following specialized skills implement the AgileSpec workflow:
 - [`agile-init`](../agile-init/SKILL.md): Setup the environment.
 - [`agile-refine-session`](../agile-refine-session/SKILL.md): Project analysis and backlog management.
 - [`agile-feature-add`](../agile-feature-add/SKILL.md) / [`agile-feature-slice`](../agile-feature-slice/SKILL.md): Requirement definition.
+- [`agile-story-add`](../agile-story-add/SKILL.md): Create new user stories.
 - [`agile-story-start`](../agile-story-start/SKILL.md) Implementation of user stories.
 - [`agile-story-in-review`](../agile-story-in-review/SKILL.md): Review user stories.
 - [`agile-story-done`](../agile-story-done/SKILL.md): Mark user stories as done.
