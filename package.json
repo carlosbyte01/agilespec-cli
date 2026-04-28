@@ -1,32 +1,39 @@
 {
-  "name": "@agilespec/cli",
-  "version": "0.1.0",
-  "description": "The command-line interface for the AgileSpec framework, standardizing AI-driven development workflows.",
-  "main": "index.js",
-  "type": "module",
-  "bin": {
-    "agilespec": "bin/index.js"
-  },
-  "files": [
-    "bin/",
-    "lib/",
-    "rules/"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "agilespec",
-    "ai",
-    "agentic",
-    "agile",
-    "workflow",
-    "cli"
-  ],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "commander": "^13.1.0",
-    "fs-extra": "^11.3.0"
-  }
+    "name": "@agilespec/cli",
+    "version": "0.1.0",
+    "description": "The command-line interface for the AgileSpec framework, standardizing AI-driven development workflows.",
+    "main": "index.js",
+    "type": "module",
+    "bin": {
+        "agilespec": "bin/index.js"
+    },
+    "files": [
+        "bin/",
+        "lib/",
+        "rules/"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "keywords": [
+        "agilespec",
+        "ai",
+        "agentic",
+        "agile",
+        "workflow",
+        "cli"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "commander": "^13.1.0",
+        "fs-extra": "^11.3.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.0.0",
+        "eslint": "^9.0.0",
+        "globals": "^15.0.0"
+    }
 }
