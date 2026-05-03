@@ -40,91 +40,90 @@ npm i -g @agilespec/cli@latest
     ```
 2. Open your coding agent and start the development cycle, let's said you are using [`pi` coding agent](https://pi.dev/)
     ```
-    User: /agile-init or "Start the AgileSpec session"
-
-    Pi: I validated the project is already initialized, I will start a /agile-refine-session to understand the project better.
-    Pi: What would you like to build? Please describe the features or the high-level goal of this project.
-
-    User: I want to build a Task Management CLI for adding tasks on the fly, and store them in superlight JSON database.
-
-    Pi: I will start a /agile-feature-add to add the new feature to the project.
-
-    Pi: Based on your requirement, we have a new feature for this project:
-        ┌───────────┬─────────────────────┬─────────────┐
-        │ ID        │ Title               │ Status      │
-        ├───────────┼─────────────────────┼─────────────┤
-        │ ft-000001 │ Task Management CLI │ NOT-STARTED │
-        └───────────┴─────────────────────┴─────────────┘
-
-    Pi: And we have three user stories on backlog:
-        ┌───────────┬─────────────────────────────┬─────────────┐
-        │ ID        │ Title                       │ Status      │
-        ├───────────┼─────────────────────────────┼─────────────┤
-        │ st-000001 │ Initialize database storage │ NOT-STARTED │
-        ├───────────┼─────────────────────────────┼─────────────┤
-        │ st-000002 │ Add a task via CLI          │ NOT-STARTED │
-        ├───────────┼─────────────────────────────┼─────────────┤
-        │ st-000003 │ List all tasks              │ NOT-STARTED │
-        └───────────┴─────────────────────────────┴─────────────┘
-
-    Pi: I recommend beginning with st-000001: Initialize database storage. Shall I proceed?
-
-    User: Yes please start working that feature
-
-    Pi: I will start the user story st-000001.
-
-    Pi: I've completed the implementation of the database storage initialization!
-
-        ### Achievements:
-        - st-000001: Initialize database storage: 
-                     Successfully set up db.js to initialize an empty tasks.json file if it doesn't exist. 
-                     All tests passed.
-
-        The story is now IN-REVIEW. 
-        You can review the code or let me know if I should proceed with the next story: st-000002: Add a task via CLI.
-
-        Should I mark st-000001 as DONE and start working on adding tasks?  
-
-    User: Yes please go ahead.
-
-
-    Pi: I've completed the implementation of adding tasks via the CLI!
-
-        ### Achievements:
-        - st-000002: Add a task via CLI: Implemented the addTask function in db.js
-                     Updated index.js to handle the add command. 
-                     You can now run node index.js add "My task".
-
-        The story is now IN-REVIEW. If you approve, 
-        I'll mark it as DONE and move on to the final story: st-000003: List all tasks.
-                                                                
-    User: I reviewed, approved
-
-
-    Pi: I've completed the implementation of listing all tasks!
-
-        ### Achievements:
-        - st-000003: List all tasks: Implemented the getTasks function in db.js
-                     Added the list command to index.js. 
-                     It now displays all tasks with their status, or a friendly message if the list is empty.
-        
-        The story is now IN-REVIEW. All tests (both database logic and CLI integration) are passing.
-        
-        Once you approve this final story, I will mark the entire feature ft-000001 as DONE.
-
-    User: The story looks ok, approved
-
-    Pi: I've completed the Task Management CLI!
-        ### Summary of Achievements:
-            - st-000001: Initialize database storage: Set up the JSON persistence layer.
-            - st-000002: Add a task via CLI: Implemented adding tasks with unique IDs.
-            - st-000003: List all tasks: Implemented the display of all saved tasks.
-
-        The feature ft-000001: Task Management CLI is now officially DONE.
-
-        You can use the CLI now:
-            - node index.js add "Learn AgileSpec"
-            - node index.js list
+    user:   /agile-init or "Start an AgileSpec session"
+    
+    agent:  I validated the project is already initialized, I will start a /agile-refine-session to understand the project better.
+    
+    agent:  What would you like to build? Please describe the features or the high-level goal of this project.
+    
+    user:   I want to build a Task Management CLI for adding tasks on the fly, and store them in superlight JSON database.
+    
+    agent:  I will start a /agile-feature-add to add the new feature to the project.
+    
+    agent:  Based on your requirement, we have a new feature for this project:
+            ┌───────────┬─────────────────────┬─────────────┐
+            │ ID        │ Title               │ Status      │
+            ├───────────┼─────────────────────┼─────────────┤
+            │ ft-000001 │ Task Management CLI │ NOT-STARTED │
+            └───────────┴─────────────────────┴─────────────┘
+    
+    agent:  And we have three user stories on backlog:
+            ┌───────────┬─────────────────────────────┬─────────────┐
+            │ ID        │ Title                       │ Status      │
+            ├───────────┼─────────────────────────────┼─────────────┤
+            │ st-000001 │ Initialize database storage │ NOT-STARTED │
+            ├───────────┼─────────────────────────────┼─────────────┤
+            │ st-000002 │ Add a task via CLI          │ NOT-STARTED │
+            ├───────────┼─────────────────────────────┼─────────────┤
+            │ st-000003 │ List all tasks              │ NOT-STARTED │
+            └───────────┴─────────────────────────────┴─────────────┘
+    
+    agent:  I recommend beginning with st-000001: Initialize database storage. Shall I proceed?
+    
+    user:   Yes please start working that feature
+    
+    agent:  I will start the user story st-000001.
+    
+    agent:  I've completed the implementation of the database storage initialization!
+    
+            ### Achievements:
+            - st-000001:    Initialize database storage:
+                            Successfully set up db.js to initialize an empty tasks.json file if it doesn't exist.
+                            All tests passed.
+    
+            The story is now IN-REVIEW.
+            You can review the code or let me know if I should proceed with the next story: st-000002: Add a task via CLI.
+    
+            Should I mark st-000001 as DONE and start working on adding tasks?
+    
+    user:   Yes please go ahead.
+    
+    agent:  I've completed the implementation of adding tasks via the CLI!
+    
+            ### Achievements:
+            - st-000002:    Add a task via CLI: Implemented the addTask function in db.js
+                            Updated index.js to handle the add command.
+                            You can now run node index.js add "My task".
+            
+            The story is now IN-REVIEW. If you approve,
+            I'll mark it as DONE and move on to the final story: st-000003: List all tasks.
+    
+    user:   I reviewed, approved
+    
+    agent:  I've completed the implementation of listing all tasks!
+    
+            ### Achievements:
+            - st-000003:    List all tasks: Implemented the getTasks function in db.js
+                            Added the list command to index.js.
+                            It now displays all tasks with their status, or a friendly message if the list is empty.
+            
+            The story is now IN-REVIEW. All tests (both database logic and CLI integration) are passing.
+            
+            Once you approve this final story, I will mark the entire feature ft-000001 as DONE.
+    
+    user:   The story looks ok, approved
+    
+    agent:  I've completed the Task Management CLI!
+            ### Summary of Achievements:
+                - st-000001: Initialize database storage: Set up the JSON persistence layer.
+                - st-000002: Add a task via CLI: Implemented adding tasks with unique IDs.
+                - st-000003: List all tasks: Implemented the display of all saved tasks.
+            
+            The feature ft-000001: Task Management CLI is now officially DONE.
+            
+            You can use the CLI now:
+                - node index.js add "Learn AgileSpec"
+                - node index.js list
     ```
 
 ## Agent commands and NLP triggers
