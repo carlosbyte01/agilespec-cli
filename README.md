@@ -22,14 +22,14 @@ npm i -g @agilespec/cli@latest
 ```
 
 ## How to use
-1. Initialize the project
+1. Initialize the project structure and agent skills
     
     Locate your project folder:
     ```bash
     cd /path/to/your/project
     ```
     
-    Init using `agilespec` CLI:
+    Init folders and skills using `agilespec` CLI:
     ```bash
     agilespec init
     ```
@@ -38,7 +38,7 @@ npm i -g @agilespec/cli@latest
     ```bash
     npx @agilespec/cli@latest init
     ```
-2. Open your coding agent and start the development cycle, let's said you are using [`pi` coding agent](https://pi.dev/)
+2. Open your coding agent and start the product development cycle
     ```
     user:   /agile-init or "Start an AgileSpec session"
     
@@ -143,8 +143,25 @@ All agents could be invoked by the user using the command `/agile-[command]` or 
 | [`/agile-story-done`](agents/skills/agile-story-done/SKILL.md)     | "The user story is done", "I've completed the story", "Story [ID] is finished", "Mark the user story as completed" |
 
 
-## Governance: Anti Greenwashing
-To prevent agents from "cheating" by modifying tests to force a pass, we enforce **Non-Negotiable Tests (NNT)**. These are immutable behavioral guardrails that the agent must satisfy but is physically forbidden from editing.
+## Why this works:
+### High-velocity workflow
+AgileSpec keeps structure, visibility, and verification working together.
+
+### Multi-agent alignment
+Multiple agents can move together without stepping on each other.
+
+### Human-in-the
+People stay in control at every meaningful step.
+
+## Governance: 
+### Anti Greenwashing
+The project should not pretend work is complete by changing tests instead of fixing the code.
+
+### Non-Negotiable Tests
+Immutable behavioral guardrails that the AI cannot modify without explicit human authorization.
+
+### Dependency tracking
+Clear dependency links help multiple agents coordinate safely.
 
 ## The 7-State Lifecycle
 We don't just use "Todo" and "Done." Our lifecycle ensures the AI knows exactly where it stands:
