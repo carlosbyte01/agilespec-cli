@@ -1,14 +1,14 @@
 
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="assets/img/agile-spec-logo-110px-30px-007.svg">
-        <img src="assets/img/agile-spec-logo-110px-30px-007.svg" alt="AgileSpec" width="600">
+        <source media="(prefers-color-scheme: light)" srcset="./assets/img/agile-spec-logo-110px-30px-007.svg">
+        <img src="./assets/img/agile-spec-logo-110px-30px-007.svg" alt="AgileSpec" width="600">
     </picture>
 </p>
 
 <p align="center">
     <a href="https://www.npmjs.com/package/@agilespec/cli"><img alt="NPM Version" src="https://img.shields.io/npm/v/@agilespec%2Fcli?style=for-the-badge" alt="Version"></a>
-    <a href="https://github.com/carlosbyte01/agilespec-cli/blob/beta/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
+    <a href="https://github.com/carlosbyte01/agilespec-cli/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
 </p>
 
 ### @agilespec/cli
