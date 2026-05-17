@@ -5,7 +5,7 @@ description: The entrypoint for the AgileSpec framework. This skill provides the
 
 # AgileSpec Entrypoint
 
-**AgileSpec** is the open-source standard for injecting Agile Methodologies into AI Coding Agents. It synchronizes Scrum, SDD, BDD, and TDD into a high-velocity development engine. 
+**AgileSpec** is the open-source standard for injecting Agile Methodologies into *Coding Agents*. It synchronizes Scrum, DDD, SDD, BDD, and TDD into a high-velocity development engine. 
 
 This skill serves as the central knowledge hub. Use it to understand the framework's philosophy, check the lifecycle status rules, or retrieve the official document templates.
 
@@ -13,7 +13,7 @@ This skill serves as the central knowledge hub. Use it to understand the framewo
 
 Detailed documentation for the framework's internal logic. **MANDATORY** to load these files for deep clarification on the entire development workflow process.
 
-- **[Framework Overview](references/AGILE.md)**: The five pillars of AgileSpec (Scrum, SDD, BDD, TDD, AGENTS.md).
+- **[Framework Overview](references/AGILE.md)**: The five pillars of AgileSpec (Scrum, DDD, SDD, BDD, TDD, AGENTS.md).
 - **[Development Lifecycle](references/AGILE-DEV-CYCLE.md)**: Rules for the 7 states (WAITING, NOT-STARTED, IN-PROGRESS, DONE, BLOCKED, etc.).
 - **[Non-Negotiable Tests (NNT)](references/NON-NEGOTIABLE-TESTS.md)**: Standards for immutable behavioral guardrails.
 - **[Storytelling Standard](references/STORY-TELLING.md)**: Guidelines for writing testable Gherkin-style user stories.

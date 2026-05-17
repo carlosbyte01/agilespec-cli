@@ -2,10 +2,10 @@
 
 > Standard Agile is too slow for 2026, VibeCoding is like guessing what the user wants in a undeterministic way, and SW Engineering Methodologies by itselft does not build a product.
 
-**AgileSpec** is an open-source framework for AI-driven development. It injects proven agile methodologies (Scrum, SDD, BDD, TDD) into AI coding agent workflows to ensure high-velocity, reliable, and observable product development.
+**AgileSpec** is an open-source framework for AI-driven development. It injects proven agile methodologies (*Scrum, DDD, SDD, BDD, TDD*) into *coding agents* to ensure high-velocity, reliable, and observable product development.
 
 **The five pillars of AgileSpec**:
-- **AGENTS.md (Native support)**: It relies on the AGENTS.md standard to guarantee compatibility between different AI coding agents; **claude**, **antigravity**, **vscode**, **cursor**, **gemini-cli**, **codex**, **pi**, **aider**, and counting.  
+- **AGENTS.md (Native support)**: It relies on the AGENTS.md standard to guarantee compatibility between different coding agents; **claude**, **antigravity**, **vscode**, **cursor**, **gemini-cli**, **codex**, **pi**, **aider**, and counting.  
 - **Scrum**: **The Manager** that drives the workflow and ensures the agents stay on track. It is the one that decides what to do next based on statuses and graph dependencies.
 - **SDD (Specification Driven Development)**: Is **The Architect** that defines the high-level intent and project structure, with clear and concise specifications. It ensures the agent understands "What" we are building.
 - **BDD (Behavior Driven Development)**: **The User** that defines the conversational logic using Gherkin (Given/When/Then). It ensures the agent understands "How" it should behave.
@@ -18,7 +18,7 @@ The orchestration of this five pillars is what makes AgileSpec a high-velocity e
 
 ## How to install
 ```
-npm i -g @agilespec/cli@latest
+npm i -g @agilespec/cli
 ```
 
 ## How to use
@@ -34,9 +34,9 @@ npm i -g @agilespec/cli@latest
     agilespec init
     ```
 
-    Init using `npx`:
+    Alternative using `npx`:
     ```bash
-    npx @agilespec/cli@latest init
+    npx @agilespec/cli init
     ```
 2. Open your coding agent and start the product development cycle
     ```
@@ -127,7 +127,7 @@ npm i -g @agilespec/cli@latest
     ```
 
 ## Agent commands and NLP triggers
-All agents could be invoked by the user using the command `/agile-[command]` or by the system using the NLP triggers.
+All agent skills could be invoked by the user using the command `/agile-[command]` or by the system using the NLP triggers.
 
 | Command                 | NLP Trigger                                |
 | ---                     | ---                                             |
@@ -150,7 +150,7 @@ AgileSpec keeps structure, visibility, and verification working together.
 ### Multi-agent alignment
 Multiple agents can move together without stepping on each other.
 
-### Human-in-the
+### Human-in-the-loop
 People stay in control at every meaningful step.
 
 ## Governance: 
