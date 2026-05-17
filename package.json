@@ -1,7 +1,13 @@
 {
     "name": "@agilespec/cli",
-    "version": "0.0.3",
+    "version": "0.0.3-dev.1",
     "description": "The command-line interface for the AgileSpec framework, standardizing AI-driven development workflows.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/carlosbyte01/agilespec-cli.git"
+    },
+    "author": "Carlos Echeverria (carlosbyte)",
+    "license": "MIT",
     "main": "index.js",
     "type": "module",
     "bin": {
@@ -39,8 +45,6 @@
         "tdd",
         "methodology"
     ],
-    "author": "",
-    "license": "MIT",
     "dependencies": {
         "commander": "^13.1.0",
         "fs-extra": "^11.3.0"
