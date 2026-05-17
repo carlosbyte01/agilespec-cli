@@ -1,6 +1,6 @@
 {
     "name": "@agilespec/cli",
-    "version": "0.1.0",
+    "version": "0.0.3",
     "description": "The command-line interface for the AgileSpec framework, standardizing AI-driven development workflows.",
     "main": "index.js",
     "type": "module",
@@ -8,14 +8,19 @@
         "agilespec": "bin/index.js"
     },
     "files": [
+        "agents/",
+        "assets/",
         "bin/",
         "lib/",
-        "rules/"
+        "templates/"
     ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
+        "lint:fix": "eslint . --fix",
+        "publish:npm:develop": "npm publish --tag develop --access public",
+        "publish:npm:dry": "npm publish --access public --dry-run",
+        "publish:npm": "npm publish --access public"
     },
     "keywords": [
         "agilespec",

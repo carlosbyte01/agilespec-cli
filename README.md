@@ -1,6 +1,19 @@
-# @agilespec/cli
 
-> The command line interface for **AgileSpec**. It provides a CLI to bootstrap projects with the necessary folder structure and rule injection to guide AI agents correctly.
+<p align="center">
+    <picture>
+        <img src="https://github.com/carlosbyte01/agilespec-cli/blob/beta/assets/img/agile-spec-logo-110px-30px-007.svg" alt="AgileSpec" width="600">
+    </picture>
+</p>
+
+
+<p align="center">
+    <a href="https://www.npmjs.com/package/@agilespec/cli"><img alt="NPM Version" src="https://img.shields.io/npm/v/@agilespec%2Fcli?style=for-the-badge" alt="Version"></a>
+    <a href="https://github.com/carlosbyte01/agilespec-cli/blob/beta/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
+</p>
+
+### @agilespec/cli
+
+> The official **AgileSpec** command line. It provides a CLI to bootstrap projects with the necessary folder structure and rule injection to guide AI agents correctly.
 
 **AgileSpec** is an open-source framework for AI-driven development. It injects proven agile methodologies (*Scrum, DDD, SDD, BDD, TDD*) into *coding agents* to ensure high-velocity, reliable, and observable product development.
 
@@ -126,7 +139,7 @@ npm i -g @agilespec/cli
                 - node index.js list
     ```
 
-## Agent commands and NLP triggers
+## Agent skills and NLP triggers
 All agent skills could be invoked by the user using the command `/agile-[command]` or by the system using the NLP triggers.
 
 | Command                 | NLP Trigger                                |
