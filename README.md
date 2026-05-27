@@ -17,15 +17,16 @@
 
 **AgileSpec** is an open-source framework for AI-driven development. It injects proven agile methodologies (*Scrum, DDD, SDD, BDD, TDD*) into *coding agents* to ensure high-velocity, reliable, and observable product development.
 
-**The five pillars of AgileSpec**:
+**The six pillars of AgileSpec**:
 - **AGENTS.md (Native support)**: It relies on the AGENTS.md standard to guarantee compatibility between different coding agents; **claude**, **antigravity**, **vscode**, **cursor**, **gemini-cli**, **codex**, **pi**, **aider**, and counting.  
 - **Scrum**: **The Manager** that drives the workflow and ensures the agents stay on track. It is the one that decides what to do next based on statuses and graph dependencies.
+- **DDD (Domain Driven Development)**: **The Domain Expert** that defines the business definitions and concepts. It ensures that agents and stakeholders speak the same language.
 - **SDD (Specification Driven Development)**: Is **The Architect** that defines the high-level intent and project structure, with clear and concise specifications. It ensures the agent understands "What" we are building.
 - **BDD (Behavior Driven Development)**: **The User** that defines the conversational logic using Gherkin (Given/When/Then). It ensures the agent understands "How" it should behave.
 - **TDD (Test Driven Development)**: Is **The Engineer** that enforces code integrity and quality through a Red-Green-Refactor loop. It ensures the agent delivers "Proven" results.
 
 
-The orchestration of this five pillars is what makes AgileSpec a high-velocity engine for AI-driven development, with HITL (Human-in-the-loop), immediate observavility and product development state at any moment.
+The orchestration of this six pillars is what makes AgileSpec a high-velocity engine for AI-driven development, with HITL (Human-in-the-loop), immediate observavility and product development state at any moment.
 
 > More to come on [www.agilespec.org](https://www.agilespec.org)
 
