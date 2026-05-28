@@ -1,5 +1,5 @@
 # DDD - Domain Driven Design: Trash Collection System
-This is the DDD index file containing just the Ubiquitous Language. Use this as a quick reference for terminology and to resolve ambiguity.
+This is the DDD index file containing just the **Ubiquitous Language**. Use this as a quick reference for terminology and to resolve ambiguity.
 
 ## Ubiquitous Language:
 

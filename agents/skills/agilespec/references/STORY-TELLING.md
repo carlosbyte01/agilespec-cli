@@ -3,7 +3,7 @@
 In this framework, a User Story is more than a description—it is an executable input for our agents.
 
 ## The Atomic Story
-Every story lives in `docs/agile/backlog/st-[id].md`, for more detailssee [USER-STORY-FORMAT.md](../templates/USER-STORY-FORMAT.md).
+Every story lives in `docs/agile/backlog/st-[id].md`, for more detailssee [USER-STORY-FORMAT.md](../assets/USER-STORY-FORMAT.md).
 - **Format:** 
     ```
     "As a [persona], I can [action] so that [value]." 
@@ -26,7 +26,7 @@ We use **BDD** to bridge the gap between human intent and machine execution.
     And the user should see a success message
     ```
 
-- **The Guardrails (NNT):** Define the "Non-Negotiable" scenarios that protect the core business logic, see [NON-NEGOTIABLE-TESTS.md](../NON-NEGOTIABLE-TESTS.md).
+- **The Guardrails (NNT):** Define the "Non-Negotiable" scenarios that protect the core business logic, see [NON-NEGOTIABLE-TESTS.md](./NON-NEGOTIABLE-TESTS.md).
 
 ## Token Budgeting
 Agents perform better when they have less noise and more signal. 

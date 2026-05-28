@@ -29,12 +29,16 @@ Always use these templates when creating/updating features or user stories files
 
 The following specialized skills implement the AgileSpec workflow:
 - [`agile-init`](../agile-init/SKILL.md): Setup the environment.
+- [`agile-ddd-update`](../agile-ddd-update/SKILL.md): Update DDD domain termonology.
 - [`agile-refine-session`](../agile-refine-session/SKILL.md): Project analysis and backlog management.
-- [`agile-feature-add`](../agile-feature-add/SKILL.md) / [`agile-feature-slice`](../agile-feature-slice/SKILL.md): Requirement definition.
+- [`agile-feature-add`](../agile-feature-add/SKILL.md): Requirement definition.
+- [`agile-feature-slice`](../agile-feature-slice/SKILL.md): Requirement decomposition into granular level stories.
+- [`agile-feature-comment`](../agile-feature-comment/SKILL.md): Add comments to features.
 - [`agile-story-add`](../agile-story-add/SKILL.md): Create new user stories.
 - [`agile-story-start`](../agile-story-start/SKILL.md) Implementation of user stories.
 - [`agile-story-in-review`](../agile-story-in-review/SKILL.md): Review user stories.
 - [`agile-story-done`](../agile-story-done/SKILL.md): Mark user stories as done.
+- [`agile-story-comment`](../agile-story-comment/SKILL.md): Add comments to user stories.
 
 ## Activation (NLP Triggers)
 

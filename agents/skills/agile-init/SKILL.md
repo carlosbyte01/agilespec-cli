@@ -19,7 +19,9 @@ This skill is automatically triggered when the user wants to initialize the proj
    - `docs/agile/in-review/`
 2. **Verify core files**: Ensure `AGENTS.md` is present in the project root and the `agilespec` master skill is available.
 3. **Notify user**: Inform the user that the "Agile structure ready."
-4. **Transition**: Prompt the user to start a refinement session using [`/agile-refine-session`](../agile-refine-session/SKILL.md).
+4. **Domain Definition**:
+   - Prompt the user to define the domain of the project using [`/agile-ddd-update`](../agile-ddd-update/SKILL.md).
+5. **Transition**: Prompt the user to start a refinement session using [`/agile-refine-session`](../agile-refine-session/SKILL.md).
 
 ## Activation (NLP Triggers)
 
