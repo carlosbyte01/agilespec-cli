@@ -10,8 +10,8 @@ description:  Collaborates with the user to update the DDD project files, determ
 This skill is automatically triggered when the user wants to initialize/update the **DDD** project files, or it can be manually invoked using [`/agile-ddd-update`](./SKILL.md).
 
 The two **DDD** files are:
-- `DDD-GLOSSARY.md`, is the DDD index file containing just the **Ubiquitous Language**. This is recommended for entry level users, or when working on basic projects that do not require a detailed understanding of the domain.
-- `DDD-MAP.md`, is the comprehensive DDD reference document mapping our **Domain Taxonomy**, **Bounded Contexts**, and **Ubiquitous Language**. This is recommended for advance users working on complex projects that need a detailed understanding of the domain.
+- `DDD-GLOSSARY.md`, is the DDD index file containing just the **Ubiquitous Language**. This is recommended for entry level users, or when working on basic projects that do not require a detailed understanding of the domain. Sample of a **DDD-GLOSSARY.md** file: [DDD-GLOSSARY.md](./references/DDD-GLOSSARY.md)
+- `DDD-MAP.md`, is the comprehensive DDD reference document mapping our **Domain Taxonomy**, **Bounded Contexts**, and **Ubiquitous Language**. This is recommended for advance users working on complex projects that need a detailed understanding of the domain. Sample of a **DDD-MAP.md** file: [DDD-MAP.md](./references/DDD-MAP.md)
 
 Also, when the **Agent** detects some termonology/concepts ambiguity, it can suggest the user to update the domain termonology and definitions.
 

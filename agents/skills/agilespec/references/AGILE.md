@@ -177,6 +177,7 @@ We don't just use "Todo" and "Done." Our lifecycle ensures the AI knows exactly 
 1. NEVER update/modify/delete any of the files under `docs/agile/` directory. This is an agent/rules/guardrails directory and should not be modified by any agent.
 
 ## The automatic triggers
-When running project indexing, the agent will automatically trigger the following actions:
+When running project indexing, the **agent** will automatically trigger the following actions:
 1. [`/agile-init`](agents/skills/agile-init/SKILL.md) if the project is not initialized yet, ask the human (or lead architect agent) if they want to initialize the project.
 2. [`/agile-refine-session`](agents/skills/agile-refine-session/SKILL.md) If there are doubts about the project, or not detected features, or not detected user stories, inform the human (or lead architect agent) about entering on a refine session.
+3. [`/agile-ddd-update`](agents/skills/agile-ddd-update/SKILL.md) If the **Agent** detects some terminology ambiguity, or need to separate the content in domain or bounded context areas, inform the human (or lead architect agent) about entering on a domain update.
