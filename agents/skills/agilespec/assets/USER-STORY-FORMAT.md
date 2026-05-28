@@ -31,7 +31,8 @@ Then [result]
 
 **NOT-STARTED**
 
-## Dependencies<!-- A table with columns: ID, STATUS, Title -->
+## Dependencies
+<!-- A table with columns: ID, STATUS, Title -->
 
 | ID     | STATUS        | Title                          |
 |--------|---------------|--------------------------------|
@@ -42,7 +43,8 @@ Then [result]
 | st-00N | NOT-STARTED   | This is the last user story    |
 
 
-## Comments <!-- Optional: Comments from agents or user, it must be brief and concise -->
+## Comments 
+<!-- Optional: Comments from agents or user, it must be brief and concise -->
 <!-- 
 A table with columns: [agent-name or user], [date], [comment]
 Example: 

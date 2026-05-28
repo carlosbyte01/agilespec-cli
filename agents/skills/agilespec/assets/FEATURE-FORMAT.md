@@ -5,7 +5,8 @@
 
 This is my awesome feature that does this, for solving that problem.
 
-## User Stories <!-- A table with columns: ID, STATUS, Title -->
+## User Stories 
+<!-- A table with columns: ID, STATUS, Title -->
 
 | ID     | STATUS        | Title                          |
 |--------|---------------|--------------------------------|
@@ -19,7 +20,8 @@ This is my awesome feature that does this, for solving that problem.
 
 **NOT-STARTED**
 
-## Comments <!-- Optional: Comments from agents or user, it must be brief and concise -->
+## Comments 
+<!-- Optional: Comments from agents or user, it must be brief and concise -->
 <!-- 
 A table with columns: [agent-name or user], [date], [comment]
 Example: 

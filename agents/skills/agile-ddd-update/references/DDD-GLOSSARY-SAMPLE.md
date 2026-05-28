@@ -5,39 +5,39 @@ This is the DDD index file containing just the **Ubiquitous Language**. Use this
 
 ### **Dumpster**: 
 - **meaning**: A physical waste container placed in the city, equipped with built-in sensors to track how full it is.
-- **boundedContext**: Monitoring Context
+- **context**: Monitoring Context
 
 ### **Route (Optimization)**: 
 - **meaning**: A mathematically ordered sequence of dumpster locations optimized for time and distance.
-- **boundedContext**: Collection Planning
+- **context**: Collection Planning
 
 ### **Route (Dispatch)**: 
 - **meaning**: A driver's active daily shift schedule, pairing them with a specific vehicle and a list of locations to clear.
-- **boundedContext**: Dispatch & Fleet Context
+- **context**: Dispatch & Fleet Context
 
 ### **Collection Vehicle**: 
 - **meaning**: The physical truck dispatched to empty dumpsters and transport waste to processing locations.
-- **boundedContext**: Dispatch & Fleet Context
+- **context**: Dispatch & Fleet Context
 
 ### **Route Planner**: 
 - **meaning**: The core calculation engine that computes the most efficient pickup paths.
-- **boundedContext**: Collection Planning
+- **context**: Collection Planning
 
 ### **Collection Point**: 
 - **meaning**: The precise geographic location (GPS coordinates) where a physical dumpster is permanently anchored.
-- **boundedContext**: Collection Planning
+- **context**: Collection Planning
 
 ### **Telemetry**: 
 - **meaning**: High-frequency raw data streams (such as fill levels and ping signals) sent wirelessly from dumpster sensors.
-- **boundedContext**: Telemetry Processing Context
+- **context**: Telemetry Processing Context
 
 ### **Edge Device**: 
 - **meaning**: The physical electronic hardware and sensor package permanently installed inside each dumpster.
-- **boundedContext**: Telemetry Processing Context
+- **context**: Telemetry Processing Context
 
 ### **Edge Deployment**: 
 - **meaning**: The process of pushing software updates, configuration scripts, or firmware over-the-air to physical dumpster sensors.
-- **boundedContext**: Telemetry Processing Context
+- **context**: Telemetry Processing Context
 
 ### **Service Container**: 
 - **meaning**: An isolated, standardized package of software that runs a single feature of our application, ensuring it works exactly the same on any computer.
