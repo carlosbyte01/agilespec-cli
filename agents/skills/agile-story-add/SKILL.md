@@ -1,6 +1,10 @@
 ---
 name: agile-story-add
 description: Adds a new user story to the AgileSpec backlog. Handles ID formatting, assigns the story to a feature, and sets dependencies.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Story Add

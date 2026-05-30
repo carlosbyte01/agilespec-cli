@@ -1,6 +1,10 @@
 ---
 name: agile-feature-add
 description: Adds a new feature to the AgileSpec project. Ensures proper ID formatting, creates the feature file using the standard template, and notifies the user.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Feature Add

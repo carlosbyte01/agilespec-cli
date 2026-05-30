@@ -1,6 +1,10 @@
 ---
 name: agile-feature-slice
 description: Slices a feature into smaller, testable user stories using vertical slicing. Identifies dependencies and updates the backlog.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Feature Slice

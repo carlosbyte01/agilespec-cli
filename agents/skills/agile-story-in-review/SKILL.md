@@ -1,6 +1,10 @@
 ---
 name: agile-story-in-review
 description: Moves a user story to the review state and waits for approval. Use when a story is completed and ready for evaluation.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Story In Review

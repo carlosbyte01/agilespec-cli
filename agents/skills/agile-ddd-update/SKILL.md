@@ -1,6 +1,10 @@
 ---
 name: agile-ddd-update
-description:  Collaborates with the user to update the (**Domain Driven Design**) **DDD** project files, determinate the domain complexity of the project, and recommend the appropriate DDD file to update.
+description:  Collaborates with the user to update the (**Domain Driven Design**) **DDD** project files, determinate the domain complexity of the project, and recommend the appropriate DDD files to update. This skill specifies a simplified version of DDD, based on just 2 key files, the `DDD-GLOSSARY.md` and `DDD-MAP.md`. This simplified approach is extrmeally beneficial for entry or advance users.  
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile DDD Update or Init
@@ -9,15 +13,20 @@ description:  Collaborates with the user to update the (**Domain Driven Design**
 
 This skill is automatically triggered when the user wants to initialize/update the **DDD** project files, or it can be manually invoked using [`/agile-ddd-update`](./SKILL.md).
 
-### The two **DDD** files are:
+Also, when the **Agent** detects some termonology/concepts ambiguity, it can suggest the user to update the domain termonology and definitions.
+
+### Dependencies
+- This skill uses **LLMT (LLM Templates)** located in the [`./assets`](./assets/) folder.
+- The **LLMT (LLM Template)** extension file is `.llmt`. 
+- The **Agent** must check the [`./assets`](./assets/*.llmt) files before attempting the task.
+
+### The **DDD** files
 - `DDD-GLOSSARY.md`, is the DDD index file containing just the **Ubiquitous Language**. 
     - This file is recommended for entry level users, or when working on basic projects that do not require a detailed understanding of the domain. 
-    - This file follows the [DDD-GLOSSARY-FORMAT.md.llmt](./assets/DDD-GLOSSARY-FORMAT.md.llmt) **LLMT (LLM Template)**.
+    - This file follows the [DDD-GLOSSARY-MD.llmt](./assets/DDD-GLOSSARY-MD.llmt) template.
 - `DDD-MAP.md`, is the comprehensive DDD reference document mapping our **Domain Taxonomy**, **Bounded Contexts**, and **Ubiquitous Language**. 
     - This file is recommended for advance users working on complex projects that need a detailed understanding of the domain. 
-    - This file follows the [DDD-MAP-FORMAT.md.llmt](./assets/DDD-MAP-FORMAT.md.llmt) **LLMT (LLM Template)**.
-
-Also, when the **Agent** detects some termonology/concepts ambiguity, it can suggest the user to update the domain termonology and definitions.
+    - This file follows the [DDD-MAP-MD.llmt](./assets/DDD-MAP-MD.llmt) template.
 
 ## **MANDATORY**: 
 - DDD files are **core-files**. The **Agent** is not authorize to write changes to the **DDD** files on your own.

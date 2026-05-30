@@ -2,7 +2,6 @@
 name: llmt-compiler
 description: Renders and compiles `.llmt` (LLM Template) files by resolving variables, conditionals, loops, and custom comments using a structured data context. Use this skill when asked to evaluate, render, or compile template structures containing double-curly braces {{ }}, statement blocks {% %}, and comment blocks {# #}.
 license: MIT
-compatibility: Compatible with Claude Code, GitHub Copilot, Pi, Codex, and custom AI agents
 metadata:
   version: "0.0.1"
   author: Agilespec.org

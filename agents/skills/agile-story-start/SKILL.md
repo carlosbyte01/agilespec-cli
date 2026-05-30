@@ -1,6 +1,10 @@
 ---
 name: agile-story-start
 description: Marks a user story as in-progress and moves it to the stories folder after verifying prerequisites and dependencies. Use when beginning work on a specific story.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Story Start

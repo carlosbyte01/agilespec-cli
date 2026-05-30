@@ -1,6 +1,10 @@
 ---
 name: agile-init
 description: Initializes the Agentic Agile environment by creating the necessary directory structure and verifying core configuration files. Use when starting a new project with AgileSpec.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Init

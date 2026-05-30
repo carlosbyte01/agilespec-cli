@@ -1,6 +1,7 @@
 <!-- This is the template for user stories. -->
 # st-[id]: [Title]
-# Feature: ft-[id]: [Title] <!-- This is the Feature this story belongs to -->
+# Feature: ft-[id]: [Title] 
+<!-- This is the Feature this story belongs to -->
 
 ## User Story
 
@@ -19,7 +20,8 @@ When [action]
 Then [result]
 ```
 
-## Non-Negotiable Tests <!--Inmutable scenarios, see docs/agile/rules/NON-NEGOTIABLE-TESTS.md -->
+## Non-Negotiable Tests 
+<!--Inmutable scenarios, see docs/agile/rules/NON-NEGOTIABLE-TESTS.md -->
 ### NNT-[id]: [test]
 ```
 Given [context]
@@ -33,7 +35,6 @@ Then [result]
 
 ## Dependencies
 <!-- A table with columns: ID, STATUS, Title -->
-
 | ID     | STATUS        | Title                          |
 |--------|---------------|--------------------------------|
 | st-000 | DONE          | This is the first user story   |

@@ -1,6 +1,10 @@
 ---
 name: agile-feature-comment
 description: Adds a comment to a specific feature file. Use to document decisions, feedback, or progress for high-level requirements.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Feature Comment
