@@ -1,0 +1,58 @@
+{# This is the LLMT Template for generating feature files #}
+{# It must be redered following the instructions defined in the `../../agile-ddd-update/references/LLMT-COMPILER.md` file #}
+{# MANDATORY: the {{ id }} is a 6-digit ID (with leading zeroes) and {{ title }} is the feature title (lowercase, hyphens). Example: `ft-000001-vite-migration` #}
+# Feature: ft-{{ id }}: {{ title }}
+
+## Description
+
+{# Something like: This is my awesome feature that does this, for solving that problem. #}
+{{ description }}
+
+## User Stories
+{# Related user stories #}
+{# A table with columns: ID, STATUS, Title
+Example:
+| ID     | STATUS        | Title                          |
+|--------|---------------|--------------------------------|
+| st-000000 | DONE          | This is the first user story   |
+| st-000001 | IN-PROGRESS   | This is the second user story  |
+| st-000002 | NOT-STARTED   | This is the third user story   |
+...
+| st-00000N | NOT-STARTED   | This is the last user story    |
+#}
+
+| ID     | STATUS        | Title                          |
+|--------|---------------|--------------------------------|
+{% for userStory in userStories %}
+| {{ userStory.id }} | {{ userStory.status }} | {{ userStory.title }} |
+{% endfor %}
+
+## Status
+
+{# Feature status - Default to NOT-STARTED #}
+**{{ status }}**
+
+## Comments
+{# Optional: Comments from agents or user, it must be brief and concise #}
+{# A table with columns:
+    - Agent: [agentName] like `/agile-feature-add` or `/agile-story-add` or [userName]
+    - Coding Agent: [codingAgent] like `Cursor`, `Codex`, `Claude Code`, `Pi`, `others`]
+    - Datetime: [date] in format `YYYY-MM-DD - HH:MM:SS` like `2000-01-01 - 12:00:00`
+    - Comment: [comment] like `Added this feature` or `User updated this feature` or `Sliced this feature`
+Example:
+| Agent                    | Coding Agent  | Datetime              | Comment                |
+|--------------------------|---------------|-----------------------|------------------------|
+| `/agile-feature-add`     | `/agile-feature-add`  | 2000-01-01 - 12:00:00 | Added this feature |
+| `User`                 | `User`               | 2000-01-01 - 12:00:00 | User updated this feature |
+| `/agile-feature-slice` | `/agile-feature-slice`| 2000-01-01 - 12:00:00 | Sliced this feature |
+| `/agile-story-add`     | `/agile-story-add`   | 2000-01-01 - 12:00:00 | Added user story `st-000001`: [Title] |
+...
+| `/agile-story-done`    | `/agile-story-done`  | 2000-01-01 - 12:00:00 | User story `st-000001`: [Title] is done |
+| `User`                 | `User`               | 2000-01-01 - 12:00:00 | Feature is done |
+#}
+
+| Agent                    | Coding Agent  | Datetime              | Comment                |
+|--------------------------|---------------|-----------------------|------------------------|
+{% for comment in comments %}
+| {{ comment.agent }} | {{ comment.codingAgent }} | {{ comment.datetime }} | {{ comment.comment }} |
+{% endfor %}

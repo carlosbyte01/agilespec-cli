@@ -24,10 +24,16 @@ Detailed documentation for the framework's internal logic. **MANDATORY** to load
 
 ## Official Templates (Assets)
 
-Always use these templates when creating/updating features or user stories files to ensure compatibility across all agents and the CLI.
+**AgileSpec** uses the **LLMT (LLM Templates)**, whic is a Jinja2-based syntax for generating structured output files. For rendering `.llmt` files, The **Agent** must follow the instrucctions specified in the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) reference.
 
-- **[Feature Format](assets/FEATURE-FORMAT.md)**: Structure for `ft-[id]-[name].md` files.
-- **[User Story Format](assets/USER-STORY-FORMAT.md)**: Structure for `st-[id]-[name].md` files.
+Always use these **LLMT Templates** when creating/updating features or user stories files to ensure compatibility across all agents and the CLI:
+
+- **[Feature Format](assets/FEATURE-FORMAT-MD.llmt)**: Structure for `ft-[id]-[name].md` files.
+- **[User Story Format](assets/USER-STORY-FORMAT-MD.llmt)**: Structure for `st-[id]-[name].md` files.
+
+Always use these **LLMT Templates** when creating/updating DDD files to ensure compatibility across all agents and the CLI:
+- **[DDD Glossary Format](../agile-ddd-update/assets/DDD-GLOSSARY-MD.llmt)**: Structure for `DDD-GLOSSARY.md` file.
+- **[DDD Map Format](../agile-ddd-update/assets/DDD-MAP-MD.llmt)**: Structure for `DDD-MAP.md` file.
 
 ## Orchestration
 

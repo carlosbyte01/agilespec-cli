@@ -18,7 +18,7 @@ Invoked manually with [`/agile-story-add`](./SKILL.md) or triggered by the user 
 1. **Validation**: Check for contradictions with existing features or stories.
 2. **Formated ID**: User stories must be named `st-[id]-[name]` where `id` is a 6-digit ID (with leading zeroes) and `name` is the story name (lowercase, hyphens). Example: `st-000001-vite-migration`.
 3. **Creation**: Create the file `docs/agile/backlog/[formated-name].md`.
-4. **Structure**: Follow the [USER-STORY-FORMAT.md](../agilespec/assets/USER-STORY-FORMAT.md) template.
+4. **Structure**: Follow the [USER-STORY-FORMAT-MD.llmt](../agilespec/assets/USER-STORY-FORMAT-MD.llmt) template.
 5. **Association**: Assign the story to its parent feature.
 6. **Dependency Check**: If there are dependencies, set the status to `WAITING-ON-DEPENDENCY`.
 7. **Notify User**: Inform the user that the story was added and show a status summary.

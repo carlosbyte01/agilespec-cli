@@ -42,7 +42,7 @@ Also, when the **Agent** detects some termonology/concepts ambiguity, it can sug
     - Explain the user that you have detected **simple** or **complex** project. And explain the benefits of **simple** vs **complex**.
     - Let user decide which complexity level to use. 
     - Later the **User** could change the complexity level and the **Agent** will update the domain termonology accordingly.
-4. **Show content and ask for confirmation**: Show the content in a resumed table, do not show json/xml jargon format, and ask the user to confirm if the domain update is correct and to approve the changes.
+4. **Show content and ask for confirmation**: Show the content to the user in a resumed table, do not show json/xml jargon format, and ask the user to confirm if the domain content is correct and to approve the changes.
 5. **Create DDD files**: Once approved, create the necessary files according to the project complexity level.
     - If project is **simple**, only create the `DDD-GLOSSARY.md`. 
     - If project is **complex**, create both `DDD-GLOSSARY.md` and `DDD-MAP.md` files. 
