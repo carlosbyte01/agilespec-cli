@@ -31,8 +31,8 @@ Also, when the **Agent** detects some termonology/concepts ambiguity, it can sug
 ## **MANDATORY**: 
 - DDD files are **core-files**. The **Agent** is not authorize to write changes to the **DDD** files on your own.
 - Always update the **DDD** files when the **User** approves and authorize the **Agent** to do so.
-- Any `*.llmt` template files must be compiled using the [`/llmt-compiler`](./references/LLMT-COMPILER.md) skill. 
-- The **Agent** will never generate the DDD files directly. Instead, it will use the [`/llmt-compiler`](./references/LLMT-COMPILER.md) skill to compile the `*.llmt` template files.
+- Any `*.llmt` template files must be compiled following the instrucctions specified in the [LLMT-COMPILER](./references/LLMT-COMPILER.md) reference.
+- The **Agent** will never generate the DDD files directly. Instead, it will follow the instrucctions specified in the [LLMT-COMPILER](./references/LLMT-COMPILER.md) reference to compile the `*.llmt` template files.
 
 ## Action Flow
 

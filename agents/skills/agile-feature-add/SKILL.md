@@ -17,9 +17,10 @@ Invoked manually with [`/agile-feature-add`](./SKILL.md) or triggered by the use
 
 1. **Validation**: Check `docs/agile/features/` and `docs/agile/backlog/` for duplicate logic or contradictions.
 2. **Formated ID**: Features must be named `ft-[id]-[name]` where `id` is a 6-digit ID (with leading zeroes) and `name` is the feature name (lowercase, hyphens). Example: `ft-000001-vite-migration`.
-3. **Creation**: Create the file `docs/agile/features/[formated-name].md`.
-4. **Structure**: Follow the [FEATURE-FORMAT-MD.llmt](../agilespec/assets/FEATURE-FORMAT-MD.llmt) template.
-5. **Notify user**: Inform the user that the feature was added and show a table with name, description, and status.
+3. **Prepare Data**: Construct the feature `<DataContext>` object.
+4. **Compile**: Execute the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) using [FEATURE-FORMAT-MD.llmt](../agilespec/assets/FEATURE-FORMAT-MD.llmt) template file.
+5. **Creation**: Create the file `docs/agile/features/[formated-name].md` with the compiled output.
+6. **Notify user**: Inform the user that the feature was added and show a table with name, description, and status.
 
 ## Activation (NLP Triggers)
 

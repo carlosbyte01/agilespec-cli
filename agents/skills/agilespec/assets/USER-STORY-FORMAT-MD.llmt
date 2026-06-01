@@ -16,7 +16,7 @@ so that {{ value }}.
 ## Acceptance Criteria
 
 {% for scenario in scenarios %}
-### Scenario-[{{ scenario.id }}]: {{ scenario.name }}
+### Scenario-{{ scenario.id }}: {{ scenario.name }}
 ```
 Given {{ scenario.context }}
 When {{ scenario.action }}
@@ -25,11 +25,11 @@ Then {{ scenario.result }}
 
 {% endfor %}
 
-## Non-Negotiable Tests 
+## Non-Negotiable Tests
 {# Inmutable scenarios, see ../references/NON-NEGOTIABLE-TESTS.md #}
 
 {% for test in nonNegotiableTests %}
-### NNT-[{{ test.id }}]: {{ test.name }}
+### NNT-{{ test.id }}: {{ test.name }}
 ```
 Given {{ test.context }}
 When {{ test.action }}
@@ -45,7 +45,7 @@ Then {{ test.result }}
 
 ## Dependencies
 {# Dependent user stories #}
-{# A table with columns: ID, STATUS, Title 
+{# A table with columns: ID, STATUS, Title
 Example:
 | ID     | STATUS        | Title                          |
 |--------|---------------|--------------------------------|

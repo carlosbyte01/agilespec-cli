@@ -22,9 +22,17 @@ Detailed documentation for the framework's internal logic. **MANDATORY** to load
 - **[Non-Negotiable Tests (NNT)](references/NON-NEGOTIABLE-TESTS.md)**: Standards for immutable behavioral guardrails.
 - **[Storytelling Standard](references/STORY-TELLING.md)**: Guidelines for writing testable Gherkin-style user stories.
 
-## Official Templates (Assets)
+## Template Rendering/Compiling
 
-**AgileSpec** uses the **LLMT (LLM Templates)**, whic is a Jinja2-based syntax for generating structured output files. For rendering `.llmt` files, The **Agent** must follow the instrucctions specified in the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) reference.
+**AgileSpec** uses the **LLMT (LLM Templates)**, whic is a Jinja2-based syntax for generating structured output files. For rendering `.llmt` files, The **Agent** must follow the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process.
+
+## STRICT COMPLIANCE RULES (Mandatory for all Agents)
+
+- **NO MANUAL TEMPLATE WRITING**: It is strictly forbidden to generate *DDD*, *Feature* or *User Story* files without following the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process.
+- **TEMPLATE COMPILER MANDATE**: All `.llmt` files must be generated solely through the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process using the provided `.llmt` templates.
+- **VALIDATION REQUIREMENT**: If an agent is unable to render a `.llmt` template using the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process, it must halt and request clarification from the user rather than improvising.
+
+## Official Templates (Assets)
 
 Always use these **LLMT Templates** when creating/updating features or user stories files to ensure compatibility across all agents and the CLI:
 
