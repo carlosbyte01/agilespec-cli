@@ -1,0 +1,86 @@
+{# This is the LLMT Template for generating user story files #}
+{# It must be redered following the instructions defined in the `../../agile-ddd-update/references/LLMT-COMPILER.md` file #}
+{# MANDATORY: the {{ id }} is a 6-digit ID (with leading zeroes) and {{ name }} is the story name (lowercase, hyphens). Example: `st-000001-vite-migration` #}
+# st-{{ id }}: {{ name }}
+{# This is the Feature this story belongs to #}
+# Feature: ft-{{ featureId }}: {{ featureName }}
+
+## User Story
+
+As a {{ persona }},
+
+I want to {{ action }},
+
+so that {{ value }}.
+
+## Acceptance Criteria
+
+{% for scenario in scenarios %}
+### Scenario-{{ scenario.id }}: {{ scenario.name }}
+```
+Given {{ scenario.context }}
+When {{ scenario.action }}
+Then {{ scenario.result }}
+```
+
+{% endfor %}
+
+## Non-Negotiable Tests
+{# Inmutable scenarios, see ../references/NON-NEGOTIABLE-TESTS.md #}
+
+{% for test in nonNegotiableTests %}
+### NNT-{{ test.id }}: {{ test.name }}
+```
+Given {{ test.context }}
+When {{ test.action }}
+Then {{ test.result }}
+```
+
+{% endfor %}
+
+## Status
+
+{# Feature status - Default to NOT-STARTED #}
+**{{ status }}**
+
+## Dependencies
+{# Dependent user stories #}
+{# A table with columns: ID, STATUS, Title
+Example:
+| ID     | STATUS        | Title                          |
+|--------|---------------|--------------------------------|
+| st-000000 | DONE          | This is the first user story   |
+| st-000001 | IN-PROGRESS   | This is the second user story  |
+| st-000002 | NOT-STARTED   | This is the third user story   |
+...
+| st-00000N | NOT-STARTED   | This is the last user story    |
+#}
+
+| ID     | STATUS        | Title                          |
+|--------|---------------|--------------------------------|
+{% for userStory in dependentStories %}
+| {{ userStory.id }} | {{ userStory.status }} | {{ userStory.title }} |
+{% endfor %}
+
+## Comments
+{# Optional: Comments from agents or user, it must be brief and concise #}
+{# A table with columns:
+    - Agent: [agentName] like `/agile-story-add` or `/agile-story-start` or [userName]
+    - Coding Agent: [codingAgent] like `Cursor`, `Codex`, `Claude Code`, `Pi`, `others`]
+    - Datetime: [date] in format `YYYY-MM-DD - HH:MM:SS` like `2000-01-01 - 12:00:00`
+    - Comment: [comment] like `Added this story` or `User updated this story` or `Sliced this story`
+Example:
+| Agent                    | Coding Agent  | Datetime              | Comment                |
+|--------------------------|---------------|-----------------------|------------------------|
+| `/agile-story-add`       | `Codex`       | 2000-01-01 - 12:00:00 | Added this user story |
+| `User`                   | `Cursor`      | 2000-01-01 - 12:00:00 | User updated this user story |
+| `/agile-story-start`     | `Pi`          | 2000-01-01 - 12:00:00 | Started working on this user story |
+| `/agile-story-in-review` | `Claude Code` | 2000-01-01 - 12:00:00 | User story is in review |
+| `/agile-story-done`      | `Pi`          | 2000-01-01 - 12:00:00 | User story is done |
+#}
+
+| Agent                    | Coding Agent  | Datetime              | Comment                |
+|--------------------------|---------------|-----------------------|------------------------|
+{% for comment in comments %}
+| {{ comment.agent }} | {{ comment.codingAgent }} | {{ comment.datetime }} | {{ comment.comment }} |
+{% endfor %}

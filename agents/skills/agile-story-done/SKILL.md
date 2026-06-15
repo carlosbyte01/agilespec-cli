@@ -1,6 +1,10 @@
 ---
 name: agile-story-done
 description: Completes a user story, verifies all Acceptance Criteria (ACs) and Non-Negotiable Tests (NNTs), and cleans up the backlog. Use when work on a story is fully finished, verified, and approved after review.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Story Done

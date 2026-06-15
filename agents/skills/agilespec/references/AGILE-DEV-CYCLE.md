@@ -16,11 +16,8 @@ It start by gattering requirements from files in `docs/requirements/`. Then the 
 
 ## Phase 2: The TDD Implementation Loop ([`/agile-story-start`](../../agile-story-start/SKILL.md))
 When an agent picks up a story, it follows this strict TDD sequence:
-1. **Agent Planning:** Analyze the delta between the current code and the BDD scenarios.
-2. **Test Creation:** Generate the unit tests and NNT hooks based on the BDD specs.
-3. **Implementation:** Write the business logic to pass the tests.
-4. **NNT Validation:** Execute mandatory Non-Negotiable scenarios.
-5. **Trigger Review:** Trigger **[`/agile-story-in-review`](../../agile-story-in-review/SKILL.md)** to move the story to review. See  for more information.
+1. **RED-GREEN-REFACTOR Loop:** Execute the [RED-GREEN-REFACTOR Loop](../../agile-story-start/references/RED-GREEN-REFACTOR-LOOP.md), this process implements the needed steps to warrant correct TDD implementation.
+2. **Trigger Review:** Trigger **[`/agile-story-in-review`](../../agile-story-in-review/SKILL.md)** to move the story to review. See  for more information.
 
 
 This loop repeats for every story in the dependency graph until the Feature is complete.

@@ -1,6 +1,10 @@
 ---
 name: agile-story-comment
 description: Adds a comment to a specific user story file. Use to log decisions, feedback, or progress for granular requirements.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Story Comment

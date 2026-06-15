@@ -1,0 +1,20 @@
+{# This is the LLMT Template for generating the DDD-GLOSSARY.md file #}
+{# It must be redered following the instructions defined in the `../references/LLMT-COMPILER.md` file #}
+# DDD - Domain Driven Design: {{ systemName }}
+This is the DDD index file containing just the **Ubiquitous Language**. Use this file as a quick reference for terminology and to resolve ambiguity.
+
+## Ubiquitous Language:
+{% if terms %}
+    {% for term in terms %}
+### **{{ term.name }}**:
+- **meaning**: {{ term.meaning }}
+        {# Decide whether to show the domain taxonomy or the local bounded context #}
+        {% if term.domainName %}
+- **domain**: {{ term.domainName }}
+        {% else %}
+- **context**: {{ term.boundedContextName }}
+        {% endif %}
+    {% endfor %}
+{% else %}
+*No terms defined*.
+{% endif %}

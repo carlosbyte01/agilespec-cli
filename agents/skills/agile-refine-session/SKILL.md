@@ -1,6 +1,10 @@
 ---
 name: agile-refine-session
 description: Collaboratively refines the project by analyzing current status, identifying missing features, user stories, and dependencies. Use to start or continue refinement sessions.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # Agile Refine Session

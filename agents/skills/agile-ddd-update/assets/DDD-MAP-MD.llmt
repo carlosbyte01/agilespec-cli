@@ -1,0 +1,47 @@
+{# This is the LLMT Template for generating the DDD-MAP.md file #}
+{# It must be redered following the instructions defined in the `../references/LLMT-COMPILER.md` file #}
+# DDD - Domain Driven Design: {{ systemName }}
+This is the comprehensive DDD reference document mapping our **Domain Taxonomy**, **Bounded Contexts**, and **Ubiquitous Language**. Use this file as the single source of truth for understanding system relationships, aligning terminology, and resolving semantic ambiguity.
+
+## Domain Taxonomy
+
+{% if domains %}
+    {# Loop over domain taxonomy list #}
+    {% for domain in domains %}
+### {{ domain.classification }}: {{ domain.name }}
+- **Description**: {{ domain.description }}
+- **Strategic Value**: {{ domain.strategicValue }}
+        {# Add the ubiquitous language terms for this domain, if any #}
+        {% if domain.terms %}
+- **Ubiquitous Language**:
+            {% for term in domain.terms %}
+    - **{{ term.name }}**: {{ term.meaning }}
+            {% endfor %}
+        {% endif %}
+
+    {% endfor %}
+{% else %}
+*No domains defined*.
+{% endif %}
+---
+
+## Bounded Contexts
+
+{% if contexts %}
+    {# Loop over bounded contexts list #}
+    {% for context in contexts %}
+### {{ context.name }}
+- **Goal**: {{ context.goal }}
+- **Domain**: {{ context.domainName }}
+        {# Add the ubiquitous language terms for this bounded context, if any #}
+        {% if context.terms %}
+- **Ubiquitous Language**:
+            {% for term in context.terms %}
+    - **{{ term.name }}**: {{ term.meaning }}
+            {% endfor %}
+        {% endif %}
+
+    {% endfor %}
+{% else %}
+*No bounded contexts defined*.
+{% endif %}

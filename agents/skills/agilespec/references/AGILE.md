@@ -1,18 +1,19 @@
 # Welcome to AgileSpec
 
-> Standard Agile is too slow for 2026, VibeCoding is like guessing what the user wants in a undeterministic way, and SW Engineering Methodologies by itselft does not build a product.
+> Standard Agile methodologies is too slow for 2026, VibeCoding is like guessing what the user wants in a undeterministic way, and SW Engineering Methodologies by itselft does not build a product.
 
 **AgileSpec** is an open-source framework for AI-driven development. It injects proven agile methodologies (*Scrum, DDD, SDD, BDD, TDD*) into *coding agents* to ensure high-velocity, reliable, and observable product development.
 
-**The five pillars of AgileSpec**:
+**The six pillars of AgileSpec**:
 - **AGENTS.md (Native support)**: It relies on the AGENTS.md standard to guarantee compatibility between different coding agents; **claude**, **antigravity**, **vscode**, **cursor**, **gemini-cli**, **codex**, **pi**, **aider**, and counting.  
 - **Scrum**: **The Manager** that drives the workflow and ensures the agents stay on track. It is the one that decides what to do next based on statuses and graph dependencies.
+- **DDD (Domain Driven Development)**: **The Domain Expert** that defines the business definitions and concepts. It ensures that agents and stakeholders speak the same language.
 - **SDD (Specification Driven Development)**: Is **The Architect** that defines the high-level intent and project structure, with clear and concise specifications. It ensures the agent understands "What" we are building.
 - **BDD (Behavior Driven Development)**: **The User** that defines the conversational logic using Gherkin (Given/When/Then). It ensures the agent understands "How" it should behave.
 - **TDD (Test Driven Development)**: Is **The Engineer** that enforces code integrity and quality through a Red-Green-Refactor loop. It ensures the agent delivers "Proven" results.
 
 
-The orchestration of this five pillars is what makes AgileSpec a high-velocity engine for AI-driven development, with HITL (Human-in-the-loop), immediate observavility and product development state at any moment.
+The orchestration of this six pillars is what makes AgileSpec a high-velocity engine for AI-driven development, with HITL (Human-in-the-loop), immediate observavility and product development state at any moment.
 
 > More to come on [www.agilespec.org](https://www.agilespec.org)
 
@@ -176,6 +177,7 @@ We don't just use "Todo" and "Done." Our lifecycle ensures the AI knows exactly 
 1. NEVER update/modify/delete any of the files under `docs/agile/` directory. This is an agent/rules/guardrails directory and should not be modified by any agent.
 
 ## The automatic triggers
-When running project indexing, the agent will automatically trigger the following actions:
+When running project indexing, the **agent** will automatically trigger the following actions:
 1. [`/agile-init`](agents/skills/agile-init/SKILL.md) if the project is not initialized yet, ask the human (or lead architect agent) if they want to initialize the project.
 2. [`/agile-refine-session`](agents/skills/agile-refine-session/SKILL.md) If there are doubts about the project, or not detected features, or not detected user stories, inform the human (or lead architect agent) about entering on a refine session.
+3. [`/agile-ddd-update`](agents/skills/agile-ddd-update/SKILL.md) If the **Agent** detects some terminology ambiguity, or need to separate the content in domain or bounded context areas, inform the human (or lead architect agent) about entering on a domain update.

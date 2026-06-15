@@ -1,6 +1,10 @@
 ---
 name: agilespec
 description: The entrypoint for the AgileSpec framework. This skill provides the core methodology rules, the 7-state development lifecycle, and the official templates (Features/Stories) used for AI-driven development.
+license: MIT
+metadata:
+  version: "0.0.1"
+  author: Agilespec.org
 ---
 
 # AgileSpec Entrypoint
@@ -18,23 +22,41 @@ Detailed documentation for the framework's internal logic. **MANDATORY** to load
 - **[Non-Negotiable Tests (NNT)](references/NON-NEGOTIABLE-TESTS.md)**: Standards for immutable behavioral guardrails.
 - **[Storytelling Standard](references/STORY-TELLING.md)**: Guidelines for writing testable Gherkin-style user stories.
 
+## Template Rendering/Compiling
+
+**AgileSpec** uses the **LLMT (LLM Templates)**, whic is a Jinja2-based syntax for generating structured output files. For rendering `.llmt` files, The **Agent** must follow the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process.
+
+## STRICT COMPLIANCE RULES (Mandatory for all Agents)
+
+- **NO MANUAL TEMPLATE WRITING**: It is strictly forbidden to generate *DDD*, *Feature* or *User Story* files without following the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process.
+- **TEMPLATE COMPILER MANDATE**: All `.llmt` files must be generated solely through the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process using the provided `.llmt` templates.
+- **VALIDATION REQUIREMENT**: If an agent is unable to render a `.llmt` template using the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process, it must halt and request clarification from the user rather than improvising.
+
 ## Official Templates (Assets)
 
-Always use these templates when creating/updating features or user stories files to ensure compatibility across all agents and the CLI.
+Always use these **LLMT Templates** when creating/updating features or user stories files to ensure compatibility across all agents and the CLI:
 
-- **[Feature Format](assets/FEATURE-FORMAT.md)**: Structure for `ft-[id]-[name].md` files.
-- **[User Story Format](assets/USER-STORY-FORMAT.md)**: Structure for `st-[id]-[name].md` files.
+- **[Feature Format](assets/FEATURE-FORMAT-MD.llmt)**: Structure for `ft-[id]-[name].md` files.
+- **[User Story Format](assets/USER-STORY-FORMAT-MD.llmt)**: Structure for `st-[id]-[name].md` files.
+
+Always use these **LLMT Templates** when creating/updating DDD files to ensure compatibility across all agents and the CLI:
+- **[DDD Glossary Format](../agile-ddd-update/assets/DDD-GLOSSARY-MD.llmt)**: Structure for `DDD-GLOSSARY.md` file.
+- **[DDD Map Format](../agile-ddd-update/assets/DDD-MAP-MD.llmt)**: Structure for `DDD-MAP.md` file.
 
 ## Orchestration
 
 The following specialized skills implement the AgileSpec workflow:
 - [`agile-init`](../agile-init/SKILL.md): Setup the environment.
+- [`agile-ddd-update`](../agile-ddd-update/SKILL.md): Update DDD domain termonology.
 - [`agile-refine-session`](../agile-refine-session/SKILL.md): Project analysis and backlog management.
-- [`agile-feature-add`](../agile-feature-add/SKILL.md) / [`agile-feature-slice`](../agile-feature-slice/SKILL.md): Requirement definition.
+- [`agile-feature-add`](../agile-feature-add/SKILL.md): Requirement definition.
+- [`agile-feature-slice`](../agile-feature-slice/SKILL.md): Requirement decomposition into granular level stories.
+- [`agile-feature-comment`](../agile-feature-comment/SKILL.md): Add comments to features.
 - [`agile-story-add`](../agile-story-add/SKILL.md): Create new user stories.
 - [`agile-story-start`](../agile-story-start/SKILL.md) Implementation of user stories.
 - [`agile-story-in-review`](../agile-story-in-review/SKILL.md): Review user stories.
 - [`agile-story-done`](../agile-story-done/SKILL.md): Mark user stories as done.
+- [`agile-story-comment`](../agile-story-comment/SKILL.md): Add comments to user stories.
 
 ## Activation (NLP Triggers)
 
