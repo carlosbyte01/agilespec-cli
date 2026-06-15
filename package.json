@@ -1,6 +1,6 @@
 {
     "name": "@agilespec/cli",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "The command-line interface for the AgileSpec framework, standardizing AI-driven development workflows.",
     "repository": {
         "type": "git",

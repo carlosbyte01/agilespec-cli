@@ -1,6 +1,6 @@
 # Welcome to AgileSpec
 
-> Standard Agile is too slow for 2026, VibeCoding is like guessing what the user wants in a undeterministic way, and SW Engineering Methodologies by itselft does not build a product.
+> Standard Agile methodologies is too slow for 2026, VibeCoding is like guessing what the user wants in a undeterministic way, and SW Engineering Methodologies by itselft does not build a product.
 
 **AgileSpec** is an open-source framework for AI-driven development. It injects proven agile methodologies (*Scrum, DDD, SDD, BDD, TDD*) into *coding agents* to ensure high-velocity, reliable, and observable product development.
 
