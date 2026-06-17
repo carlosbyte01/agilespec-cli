@@ -1,19 +1,17 @@
 # Governance Controls
 
-This reference document provides an overview of the *governance controls* used in the *AgileSpec CLI*, it describes in detail the different types of governance controls, their purpose and use cases.
+This reference document provides guiderails and overview of the *governance controls* used in the *AgileSpec Framework*. This file describes in detail the different types of governance controls, their purpose and use cases.
 
-*The user* could ask for listing or explaining the registerd in the session at any time. *The agent* will respond with the list or explanation of the governance controls currently registered in the session.
+This file does not register any *governance controls*, the *governance controls* will be registerd in the skill or other reference files. The *governance controls* in this file are demo purposes only, to teach how to register and use *governance controls*.
 
-When loading/indexing the project, the *Agent* must:
-- Identify the registered *governance controls* (`built-in` or `user-defined`), keep them in the session, and do not show them on console output.
 
 ## Defining Governance Controls
-Governance controls are dissabled by default, but the user could activate them by stating it on natural language.
+Governance controls are enabled by default, but the user could activate them by stating it on natural language.
 
 ### Built-in Governance Controls
 There are several already defined as part of the *AgileSpec Framework*, and are already written on the skill files and reference documents.
 
-- They are disabled by default.
+- They are enabled by default.
 - The user could disable/enable them by stating it on natural language as needed.
 
 ### User-defined Governance Controls
@@ -52,3 +50,16 @@ This type is used to stop the execution and allow the user/agents to conduct ins
         ```
         - **AUDIT-ACTION:stop-before-code-submition:** Please stop before submitting the code, as the user is requiring to review the code before proceeding.
         ```
+
+## Listing Governance Controls
+
+- *The user* could ask for listing or explaining the registerd *governance controls* in the session at any time.
+- *The agent* will respond with the list or explanation of the governance controls currently registered in the session, and how to enable or dissable them.
+
+## Loading Registered Governance Controls
+
+When loading/indexing the project, *the agent* must:
+    - Identify the registered *governance controls* (`built-in` or `user-defined`) written in the skill or reference files in the `./agents/skills/**/*.md` `./agents/skills/**/references/*.md` directory. 
+    - Exclude this file from the scanned files., this file defines only samples.
+    - To identify the registerd *governance controls*, the *Agent* must read the skill or reference files to match the *governance control syntax* `CONTROL-TYPE:<state>:<tag-name>: <condition>`.
+    - Then keep the identified *governance controls* in the session, and do not show them on console output.

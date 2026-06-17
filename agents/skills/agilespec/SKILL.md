@@ -23,17 +23,33 @@ Detailed documentation for the framework's internal logic. **MANDATORY** to load
 - **[Storytelling Standard](references/STORY-TELLING.md)**: Guidelines for writing testable Gherkin-style user stories.
 - **[Governance Controls](references/GOVERNANCE-CONTROLS.md)**: Guidelines for harnessing and making AgileSpec governable, debuggable and auditable.
 
+
+## Project Loading Mandate
+Upon loading the repository or beginning a new session, the *Agent must* follow the next sequence for building displaying a *Welcome Resume Intro*:
+    - Load the registered governance controls as guided in [Governance Controls](../agilespec/references/GOVERNANCE-CONTROLS.md).
+    - Show short bullets explaining that the project runs with *AgileSpec*.
+    - Show a short line about supporting *Governance Controls* for making the project governable, debuggable and auditable, and how many were registered in the session.
+    - Then, show a short message stating readiness to continue with the cycle, refinning sessions or defining DDD domain for the project.
+    - Why didn't you show the governance resumed info in the beginning of the session?
+
+The *Welcome Resume Intro* can be beatufied with some emojis, and the content must be something like:
+    ```
+    Hello! I'm your AgileSpec coding assistant. I'm ready to help you manage and develop the terminal-port-system project.
+    
+    - This project is managed using the AgileSpec Framework, which synchronizes Scrum, DDD, SDD, BDD, and TDD into a structured development engine.
+    - Governance Controls are active, ensuring the project remains governable, debuggable, and auditable.
+    - 2 governance controls have been registered for this session to maintain code quality and implementation flow.
+    
+    I am now ready to continue with the development cycle, refine session, slicing features or define the DDD domain for the [project-name]. How shall we proceed?
+    ```
+
+
 ## Template Rendering/Compiling
 
 **AgileSpec** uses the **LLMT (LLM Templates)**, whic is a Jinja2-based syntax for generating structured output files. For rendering `.llmt` files, The **Agent** must follow the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process.
 
 ## STRICT COMPLIANCE RULES (Mandatory for all Agents)
 
-- **PROJECT LOADING MANDATE**: Upon loading the repository or beginning a new session, the Agent *must*:
-    - Show a short bullets explaining the project is ran with *AgileSpec*.
-    - Support for *Governance Controls* for making the project governable, debuggable and auditable. 
-    - Then, show a short message stating readiness to continue with the cycle.
-- **GOVERNANCE INITIALIZATION MANDATE**: Upon loading the repository or beginning a new session, the Agent *must* immediately load the registered Governance Controls as guided in [Governance Controls](../agilespec/references/GOVERNANCE-CONTROLS.md).
 - **NO MANUAL TEMPLATE WRITING**: It is strictly forbidden to generate *DDD*, *Feature* or *User Story* files without following the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process.
 - **TEMPLATE COMPILER MANDATE**: All `.llmt` files must be generated solely through the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process using the provided `.llmt` templates.
 - **VALIDATION REQUIREMENT**: If an agent is unable to render a `.llmt` template using the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process, it must halt and request clarification from the user rather than improvising.
