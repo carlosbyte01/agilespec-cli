@@ -4,6 +4,8 @@ AgileSpec relies on the **RED-GREEN-REFACTOR** loop to implement stories, this f
 
 The **Agent** must implement the **RED-GREEN-REFACTOR** following the steps detailed below in the **Action Flow**.
 
+The **RED-GREEN-REFACTOR** loop has implemented [Built-in Governance Controls](../../agilespec/references/GOVERNANCE-CONTROLS.md) for harnessing the **Action Flow**. The **Agent** must pay attention to this registerd controls.
+
 ## Notes
 
 - The RED-GREEN-REFACTOR loop is execute per test scenario.
@@ -24,21 +26,20 @@ The **Agent** must implement the **RED-GREEN-REFACTOR** following the steps deta
     - Execute **RED Stage**:
         - **Test Planning:** Analyze the delta between the current test implementation and the pending scenario to implement.
         - **Test Implementation**: Implement the test scenario and assertions first, then run the test to make it fail.
-        - **Checkpoint-verification**:
-            - This is a checkpoint for debugging purposes.
-            - This checkpoint is **DISABLED by default**, and is only enabled when the user states they want to verify the test implementation.
-            - Stop **ONLY if the user stated that they want to verify the test implementation**, before continuing to the *GREEN stage*.
+        - **AUDIT-ACTION:DISABLED:test-implementation-inspection:**
+            - This is for debugging purposes. 
+            - Stop and let the user to visually inspect the test implementation, before continuing to the *GREEN stage*.
             - Inform the user that the test scenario was implemented, and the agent will wait for confirmation to continue to the *GREEN stage*.
     - **Minimal message**: Inform the user that test scenario was implemented.
     - Execute **GREEN Stage**:
         - Implement the bussines logic following the business requirements.
         - Run the test to verify the implemented bussines logic passes, if does not pass, fix the logic and run the test again.
-        - **Checkpoint-hard-stop**: 
-            - The agent reached 3 attempts to implement the business logic.
-            - If the test fails after 3 attempts, stop and inform the user. Maybe the agent needs to gather more information to correctly implement the business logic.
         - **MANDATORY**: 
             - Never implement slop business logic for the sake of making the test pass.
             - Do not get **Eagerly** on generating scenarios you think are needed.
+        - **AUDIT-ACTION:logic-implementation-hard-stop**: 
+            - The agent reached 3 attempts to implement the business logic.
+            - If the test fails after 3 attempts, stop and inform the user. Maybe the agent needs to gather more information to correctly implement the business logic.
     - **Minimal message**: Inform the user that bussines logic was implemented and is green.
     - Execute **REFACTOR Stage**.
     - **Minimal message**: Inform the user that code was refactored.

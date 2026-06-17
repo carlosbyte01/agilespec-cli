@@ -2,6 +2,10 @@
 
 This reference document provides an overview of the *governance controls* used in the *AgileSpec CLI*, it describes in detail the different types of governance controls, their purpose and use cases.
 
+*The user* could ask for listing or explaining the registerd in the session at any time. *The agent* will respond with the list or explanation of the governance controls currently registered in the session.
+
+When loading/indexing the project, the *Agent* must:
+- Identify the registered *governance controls* (`built-in` or `user-defined`), keep them in the session, and do not show them on console output.
 
 ## Defining Governance Controls
 Governance controls are dissabled by default, but the user could activate them by stating it on natural language.
@@ -29,10 +33,12 @@ It validates conditions to decide continuation to next steps.
             - `DISABLED` to indicate the validation action is inactive and will not be executed.
         - `tag-name`: a unique identifier for the validation action, compound of words joined with `-` (e.g. `verify-valid-status`)
         - `condition`: the condition to validate, using a natural language expression.
-    - Examples: 
+    - Examples: this are mere samples, they are not registered controls 
+        ```
         - **VALIDATION-ACTION:verify-valid-response-code:** validate the response code from API is [200, 201], if not, raise an error on console and continue execution.
         - **VALIDATION-ACTION:ENABLED:verify-file-content:** verify the content of the file matches the expected content, using a regular expression, if not, raise an error on console and ask the user for instructions.
         - **VALIDATION-ACTION:DISABLED:verify-something-else:** It means this validation is dissabled and will not be executed.
+        ```
 
 ### AUDIT-ACTION:
 This type is used to stop the execution and allow the user/agents to conduct inspections or take corrective actions.
@@ -42,5 +48,7 @@ This type is used to stop the execution and allow the user/agents to conduct ins
             - `DISABLED` to indicate the audit action is inactive, and it will not be executed.
         - `<tag-name>`: a unique identifier for the audit action, compound of words joined with `-` (e.g. `verify-something-else`).
         - `<condition>`: the condition to validate, using a natural language expression.
-    - Examples:
+    - Examples: this are mere samples, they are not registered controls 
+        ```
         - **AUDIT-ACTION:stop-before-code-submition:** Please stop before submitting the code, as the user is requiring to review the code before proceeding.
+        ```

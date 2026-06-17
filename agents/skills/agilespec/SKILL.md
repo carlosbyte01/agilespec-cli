@@ -21,6 +21,7 @@ Detailed documentation for the framework's internal logic. **MANDATORY** to load
 - **[Development Lifecycle](references/AGILE-DEV-CYCLE.md)**: Rules for the 7 states (WAITING, NOT-STARTED, IN-PROGRESS, DONE, BLOCKED, etc.).
 - **[Non-Negotiable Tests (NNT)](references/NON-NEGOTIABLE-TESTS.md)**: Standards for immutable behavioral guardrails.
 - **[Storytelling Standard](references/STORY-TELLING.md)**: Guidelines for writing testable Gherkin-style user stories.
+- **[Governance Controls](references/GOVERNANCE-CONTROLS.md)**: Guidelines for harnessing and making AgileSpec governable, debuggable and auditable.
 
 ## Template Rendering/Compiling
 
@@ -28,6 +29,11 @@ Detailed documentation for the framework's internal logic. **MANDATORY** to load
 
 ## STRICT COMPLIANCE RULES (Mandatory for all Agents)
 
+- **PROJECT LOADING MANDATE**: Upon loading the repository or beginning a new session, the Agent *must*:
+    - Show a short bullets explaining the project is ran with *AgileSpec*.
+    - Support for *Governance Controls* for making the project governable, debuggable and auditable. 
+    - Then, show a short message stating readiness to continue with the cycle.
+- **GOVERNANCE INITIALIZATION MANDATE**: Upon loading the repository or beginning a new session, the Agent *must* immediately load the registered Governance Controls as guided in [Governance Controls](../agilespec/references/GOVERNANCE-CONTROLS.md).
 - **NO MANUAL TEMPLATE WRITING**: It is strictly forbidden to generate *DDD*, *Feature* or *User Story* files without following the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process.
 - **TEMPLATE COMPILER MANDATE**: All `.llmt` files must be generated solely through the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process using the provided `.llmt` templates.
 - **VALIDATION REQUIREMENT**: If an agent is unable to render a `.llmt` template using the [LLMT-COMPILER](../agile-ddd-update/references/LLMT-COMPILER.md) process, it must halt and request clarification from the user rather than improvising.

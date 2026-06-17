@@ -22,9 +22,10 @@ This skill is automatically triggered when the user wants to initialize the proj
    - `docs/agile/done/`
    - `docs/agile/in-review/`
 2. **Verify core files**: Ensure `AGENTS.md` is present in the project root and the `agilespec` master skill is available.
-3. **Notify user**: Inform the user that the "Agile structure ready."
-4. **Transition**: Prompt the user to start a refinement session using [`/agile-refine-session`](../agile-refine-session/SKILL.md).
-5. **Domain Definition**: If the **Agent** detects some terminology ambiguity, or need to separate the content in domain or bounded context areas, prompt the user to define the domain of the project using [`/agile-ddd-update`](../agile-ddd-update/SKILL.md).
+3. **Initialize Governance**: Load the registered Governance Controls as guided in [Governance Controls](../agilespec/references/GOVERNANCE-CONTROLS.md)
+4. **Notify user**: Inform the user that the "Agile structure ready."
+5. **Transition**: Prompt the user to start a refinement session using [`/agile-refine-session`](../agile-refine-session/SKILL.md).
+6. **Domain Definition**: If the **Agent** detects some terminology ambiguity, or need to separate the content in domain or bounded context areas, prompt the user to define the domain of the project using [`/agile-ddd-update`](../agile-ddd-update/SKILL.md).
 
 ## Activation (NLP Triggers)
 
