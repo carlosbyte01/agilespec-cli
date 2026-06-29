@@ -5,8 +5,8 @@ Our cycle is a closed loop where every line of code is justified by a Specificat
 ## Phase 1: The SDD/BDD Planning Loop
 It start by gattering requirements from files in `docs/requirements/`. Then the human (or lead architect agent) enter in the loop to define the Features and slices it into Stories. It follows the next sequence of steps:
 1. **Gattering Requirements:** 
-    - Read the requirements from files in `docs/requirements/`.
-    - If no files on `docs/requirements/`, MANDATORY INFORM THE USER "No requirements found on `docs/requirements/` folder". Then, read files from `docs/` folder, but exclude `docs/agile/` folder (NEVER USE FILES FROM `docs/agile/` FOLDER) as source of requirements.
+    - **NEVER USE FILES FROM** `docs/agile/` as source of requirements. This folder is reserved for AgileSpec artifacts only.
+    - Read the requirements from files in `docs/requirements/` and `docs/` folders.
     - If no files are detected on `docs/requirements/` and `docs/` folders:
         - MANDATORY INFORM THE USER "No requirements found on `docs/requirements/` folder and `docs/` folder".
         - Propose the user to start a new refinement session with [`/agile-refine-session`](../../agile-refine-session/SKILL.md) and talk about the project requirements.
